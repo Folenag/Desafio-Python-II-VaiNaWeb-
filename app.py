@@ -1,28 +1,13 @@
-from flask import Flask,request, jsonify
-app = Flask(__name__)
 import sqlite3
+from flask import Flask,request, jsonify
+from flask_cors import CORS
+app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/')
 def manda_o_pix():
     return "<h2>Se a tela apagou, tá devendo!!!</h2>"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 def init_db():
